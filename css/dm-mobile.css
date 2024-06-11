@@ -1,0 +1,166 @@
+html * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1rem;
+}
+h1 {
+    font-size: 1rem;
+}
+ul {
+    list-style-type: none;
+}
+.dm-wrapper {
+    background: #ffc;
+    width: 380px;
+    height: 788px;
+    margin: 0 auto;
+    transform: scale(1);
+}
+.dm-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #ddd;
+    width: 380px;
+    height: 788px;
+    position: relative;
+}
+.header {
+    background: purple;
+    line-height: 2.2rem;
+    padding: 8px 12px;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+}
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.spbetween {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.dm-content {
+    line-height: 2.2rem;
+    text-align: left;
+    padding: 20px;
+    font-weight: 600;
+    color: #444;
+}
+.footer {
+    margin-top: auto;
+    background: purple;
+    line-height: 2.2rem;
+    padding: 8px 12px;
+    text-align: center;
+    color: #fff;
+}
+.link {
+    cursor: pointer;
+}
+.dm-listview li {
+    background: #fff;
+    line-height: 2.2rem;
+    border: 1px solid #aaa;
+    border-top: 0;
+    padding: 8px 12px;
+    width: 100%;
+    cursor: pointer;
+}
+.dm-listview li a {
+    text-decoration: none;
+    color: #444;
+}
+.dm-listview li .dm-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hide {
+    display: none;
+}
+.mt-2 {
+    margin-top: 2rem;
+}
+
+/*
+    buttons
+*/
+.dm-button {
+    display: inline-block;
+    padding: 0.75em 1.2em;
+    margin-bottom: 5rem;
+    border: 0.16em solid rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+    text-align: center;
+    width: 100%;
+    background-color: #4e9af1;
+}
+.dm-button:hover {
+    background-color: blue;
+}
+
+/*
+    form
+*/
+.dm-form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    line-height: 1rem;
+    gap: 1rem;
+    margin-top: 5rem;
+}
+.dm-form label {
+    color: purple;
+}
+.dm-form input {
+    font-size: 1rem;
+    line-height: 1rem;
+    border: none;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    outline: none;
+}
+.dm-form input:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.dm-form input:focus {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/*
+    Welcome Page
+*/
+.welcome {
+    font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    line-height: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+    color: purple;
+}
+.welcome h1.title {
+    color: navy;
+    font-size: 2rem;
+    margin: 1rem 0;
+}
