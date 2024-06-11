@@ -19,9 +19,9 @@ export default class DmPageHeader extends LitElement {
     render() {
         if (this.href != "") {
             return html`
-                <div class="header spbetween">
+                <div class="dm-header spbetween">
                     <span
-                        class="link"
+                        class="dm-link"
                         @click="${this.click}"
                         data-next="${this.href}"
                     >
@@ -33,7 +33,7 @@ export default class DmPageHeader extends LitElement {
             `;
         }
         return html`
-            <div class="header center">
+            <div class="dm-header center">
                 <h1>${this.text}</h1>
             </div>
         `;

@@ -1,3 +1,8 @@
+:root {
+    --page-width: 306px;
+    --page-height: 541px;
+}
+
 html * {
     box-sizing: border-box;
     padding: 0;
@@ -15,27 +20,49 @@ ul {
     list-style-type: none;
 }
 .dm-wrapper {
-    background: #ffc;
-    width: 380px;
-    height: 788px;
+    background-image: url("../images/mobile1.png");
+    background-repeat: no-repeat;
+    background-size: 360px;
+    width: 360px;
+    height: 770px;
     margin: 0 auto;
-    transform: scale(1);
+    margin-top: 5rem;
+    transform: scale(0.8);
+    position: relative;
 }
 .dm-page {
+    left: 28px;
+    top: 110px;
+    width: var(--page-width);
+    height: var(--page-height);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     background: #ddd;
-    width: 380px;
-    height: 788px;
-    position: relative;
+    position: absolute;
 }
-.header {
+.dm-header {
     background: purple;
     line-height: 2.2rem;
     padding: 8px 12px;
     text-align: center;
     align-items: center;
+    color: #fff;
+}
+.dm-content {
+    height: calc(var(--page-height) - 2.2rem - 2.2rem);
+    line-height: 2.2rem;
+    text-align: left;
+    padding: 0 10px;
+    font-weight: 600;
+    color: #444;
+}
+.dm-footer {
+    margin-top: auto;
+    background: purple;
+    line-height: 2.2rem;
+    padding: 8px 12px;
+    text-align: center;
     color: #fff;
 }
 .center {
@@ -48,22 +75,7 @@ ul {
     align-items: center;
     justify-content: space-between;
 }
-.dm-content {
-    line-height: 2.2rem;
-    text-align: left;
-    padding: 20px;
-    font-weight: 600;
-    color: #444;
-}
-.footer {
-    margin-top: auto;
-    background: purple;
-    line-height: 2.2rem;
-    padding: 8px 12px;
-    text-align: center;
-    color: #fff;
-}
-.link {
+.dm-link {
     cursor: pointer;
 }
 .dm-listview li {
@@ -90,14 +102,21 @@ ul {
 .mt-2 {
     margin-top: 2rem;
 }
-
-/*
+.mb-4 {
+    margin-bottom: 4rem;
+}
+.bg-white {
+    background: #fff !important;
+}
+.bg-ddd {
+    background: #ddd;
+}
+/*  
     buttons
 */
 .dm-button {
     display: inline-block;
     padding: 0.75em 1.2em;
-    margin-bottom: 5rem;
     border: 0.16em solid rgba(255, 255, 255, 0);
     border-radius: 10px;
     text-decoration: none;
@@ -156,11 +175,13 @@ ul {
     line-height: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 2.2rem;
     color: purple;
 }
 .welcome h1.title {
     color: navy;
     font-size: 2rem;
-    margin: 1rem 0;
+    margin: 3rem 0;
+}
+.welcome .label {
+    margin-bottom: 1rem;
 }

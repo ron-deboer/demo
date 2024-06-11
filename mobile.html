@@ -11,35 +11,33 @@
         <div class="dm-wrapper">
             <div class="dm-page" id="welcome">
                 <dm-page-header text="Welcome" href=""></dm-page-header>
-                <div class="dm-content text">
+                <div class="dm-content">
                     <div class="welcome">
                         <div class="center">
                             <h1 class="title">Welcome</h1>
                         </div>
-
-                        <div>Existing User ?</div>
-                        <div>
+                        <div class="label">Existing User ?</div>
+                        <div class="mb-4">
                             <a
                                 href="javascript:app.navigate('#welcome', '#login')"
                                 class="dm-button"
                                 >Sign In</a
                             >
                         </div>
-
-                        <div>Don't have an account ?</div>
+                        <div class="label">Don't have an account ?</div>
                         <div>
                             <a href="#login" class="dm-button">Sign Up</a>
                         </div>
                     </div>
                 </div>
-                <div class="footer">
+                <div class="dm-footer">
                     <h4>Page Footer</h4>
                 </div>
             </div>
 
             <div class="dm-page hide" id="login">
                 <dm-page-header text="Sign In" href="#welcome"></dm-page-header>
-                <div class="dm-content login">
+                <div class="dm-content">
                     <form class="dm-form" onsubmit="javascript:return false;">
                         <label for="username">User Name</label>
                         <input
@@ -59,13 +57,12 @@
                             value="admin"
                             autocomplete="off"
                         /><br />
-
                         <button onclick="app.login()" class="dm-button">
                             Sign In
                         </button>
                     </form>
                 </div>
-                <div class="footer">
+                <div class="dm-footer">
                     <h4>Page Footer</h4>
                 </div>
             </div>
@@ -98,31 +95,23 @@
                             text="Page 6"
                             href="#page6"
                         ></dm-list-item>
-                        <dm-list-item
-                            text="Page 7"
-                            href="#page7"
-                        ></dm-list-item>
-                        <dm-list-item
-                            text="Page 8"
-                            href="#welcome"
-                        ></dm-list-item>
                     </ul>
-                    <button
+                </div>
+                <div class="dm-footer bg-ddd">
+                    <a
+                        href="#"
                         onclick="app.navigate('#nav', '#welcome')"
-                        class="dm-button mt-2"
+                        class="dm-button"
                     >
                         Sign Out
-                    </button>
-                </div>
-                <div class="footer">
-                    <h4>Page Footer</h4>
+                    </a>
                 </div>
             </div>
 
             <div class="dm-page hide" id="page1">
                 <dm-page-header text="Page 1" href="#nav"></dm-page-header>
                 <div class="dm-content text">Content</div>
-                <div class="footer">
+                <div class="dm-footer">
                     <h4>Page Footer</h4>
                 </div>
             </div>
@@ -130,7 +119,7 @@
             <div class="dm-page hide" id="page2">
                 <dm-page-header text="Page 2" href="#nav"></dm-page-header>
                 <div class="dm-content">Content</div>
-                <div class="footer">
+                <div class="dm-footer">
                     <h4>Page Footer</h4>
                 </div>
             </div>
@@ -138,7 +127,7 @@
             <div class="dm-page hide" id="page3">
                 <dm-page-header text="Page 3" href="#nav"></dm-page-header>
                 <div class="dm-content">Content</div>
-                <div class="footer">
+                <div class="dm-footer">
                     <h4>Page Footer</h4>
                 </div>
             </div>
@@ -146,7 +135,7 @@
             <div class="dm-page hide" id="page4">
                 <dm-page-header text="Page 4" href="#nav"></dm-page-header>
                 <div class="dm-content">Content</div>
-                <div class="footer">
+                <div class="dm-footer">
                     <h4>Page Footer</h4>
                 </div>
             </div>
