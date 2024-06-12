@@ -4,8 +4,11 @@
         <meta charset="UTF-8" />
         <title>Mobile Web App</title>
         <link rel="stylesheet" href="css/dm-mobile.css" />
+
         <script src="js/dm-listitem.js" type="module"></script>
         <script src="js/dm-pageheader.js" type="module"></script>
+        <script src="js/dm-cardlist.js" type="module"></script>
+        <script src="js/dm-cryptolist.js" type="module"></script>
     </head>
     <body>
         <div style="display: flex">
@@ -34,11 +37,13 @@
                         <div class="welcome">
                             <div class="label mt-4">Existing User ?</div>
                             <div class="mb-4">
-                                <a
-                                    href="javascript:app.navigate('#welcome', '#login')"
+                                <button
+                                    href="#"
+                                    onclick="app.navigate('#welcome', '#login')"
                                     class="dm-button"
-                                    >Sign In</a
                                 >
+                                    Sign In
+                                </button>
                             </div>
                             <div class="label">Don't have an account ?</div>
                             <div>
@@ -82,7 +87,7 @@
                                 name="password"
                                 value="admin"
                                 autocomplete="off"
-                            /><br />
+                            />
                             <button onclick="app.login()" class="dm-button">
                                 Sign In
                             </button>
@@ -94,7 +99,7 @@
                 </div>
 
                 <div class="dm-page hide" id="nav">
-                    <dm-page-header text="Nav" href=""></dm-page-header>
+                    <dm-page-header text="Nav Bar" href=""></dm-page-header>
                     <div>
                         <ul class="dm-listview">
                             <dm-list-item
@@ -110,7 +115,7 @@
                                 href="#page3"
                             ></dm-list-item>
                             <dm-list-item
-                                text="Cards"
+                                text="Credit Cards"
                                 href="#page4"
                             ></dm-list-item>
                         </ul>
@@ -143,79 +148,21 @@
                 </div>
 
                 <div class="dm-page hide" id="page2">
-                    <dm-page-header text="Page 2" href="#nav"></dm-page-header>
+                    <dm-page-header text="Map" href="#nav"></dm-page-header>
                     <div class="dm-content">
-                        <div
-                            style="
-                                list-style: none;
-                                transition: none;
-                                overflow: hidden;
-                                width: 305px;
-                                height: 490px;
-                            "
-                        >
-                            <div
-                                id="my-map-display"
-                                style="
-                                    height: 100%;
-                                    width: 100%;
-                                    max-width: 100%;
-                                "
-                            >
-                                <iframe
-                                    style="height: 100%; width: 100%; border: 0"
-                                    frameborder="0"
-                                    src="https://www.google.com/maps/embed/v1/place?q=Melbourne+VIC,+Australia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
-                                ></iframe>
-                            </div>
-                            <a
-                                class="our-googlemap-code"
-                                rel="nofollow"
-                                href="https://kbj9qpmy.com/bp"
-                                id="inject-map-data"
-                                >Broadband Providers</a
-                            ><style>
-                                #my-map-display .text-marker {
-                                }
-                                .map-generator {
-                                    max-width: 100%;
-                                    max-height: 100%;
-                                    background: none;
-                                }
-                            </style>
-                        </div>
+                        <iframe
+                            id="ifMap"
+                            width="307"
+                            height="496"
+                            src=""
+                        ></iframe>
                     </div>
                 </div>
 
                 <div class="dm-page hide" id="page3">
                     <dm-page-header text="Crypto" href="#nav"></dm-page-header>
                     <div class="dm-content">
-                        <table class="dm-table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Coin</th>
-                                    <th scope="col">Price</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td scope="row">BTC</td>
-                                    <td>$67,447</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">ETH</td>
-                                    <td>$3,501</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">XRP</td>
-                                    <td>$0.4809</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">BNB</td>
-                                    <td>$605</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <dm-crypto-list></dm-crypto-list>
                     </div>
                     <div class="dm-footer">
                         <h4>Page Footer</h4>
@@ -223,36 +170,12 @@
                 </div>
 
                 <div class="dm-page hide" id="page4">
-                    <dm-page-header text="Cards" href="#nav"></dm-page-header>
+                    <dm-page-header
+                        text="Credit Cards"
+                        href="#nav"
+                    ></dm-page-header>
                     <div class="dm-content">
-                        <table class="dm-table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Account</th>
-                                    <th scope="col">Balance</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Visa - 3412</td>
-                                    <td>$1,190</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">Visa - 6076</td>
-                                    <td>$2,443</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">AMEX</td>
-                                    <td>$1,181</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row" data-label="Acount">
-                                        Visa - 3332
-                                    </td>
-                                    <td>$842</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <dm-card-list></dm-card-list>
                     </div>
                     <div class="dm-footer">
                         <h4>Page Footer</h4>

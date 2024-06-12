@@ -26,8 +26,8 @@ export default class DmListItem extends LitElement {
                     @click="${this.click}"
                     data-next="${this.href}"
                 >
-                    <p>${this.text}</p>
-                    <h1>&#11208;</h1>
+                    <span>${this.text}</span>
+                    <h1 class="symbol">&#11208;</h1>
                 </div>
             </li>
         `;

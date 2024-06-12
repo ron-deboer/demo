@@ -93,10 +93,13 @@ ul {
     text-decoration: none;
     color: #444;
 }
-.dm-listview li .dm-item {
+.dm-listview li div.dm-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.symbol {
+    color: #444;
 }
 .hide {
     display: none;
@@ -122,6 +125,9 @@ ul {
 .bg-ddd {
     background: #ddd;
 }
+.right {
+    text-align: right !important;
+}
 /*  
     buttons
 */
@@ -139,6 +145,7 @@ ul {
     text-align: center;
     width: 100%;
     background-color: SlateBlue;
+    cursor: pointer;
 }
 .dm-button:hover {
     background-color: DarkSlateBlue;
@@ -148,8 +155,8 @@ ul {
     background-color: DarkSlateBlue;
     color: #fff;
 }
-.dm-button-blue {
-    background-color: DarkSlateBlue;
+.dm-button-purple {
+    background-color: purple;
     color: #fff;
 }
 /*
@@ -230,12 +237,14 @@ ul {
     margin: 0;
 }
 
-.dm-table th,
-.dm-table td {
+.dm-table th {
     padding: 0.625em;
     text-align: center;
 }
-
+.dm-table td {
+    padding: 0.625em;
+    text-align: left;
+}
 .dm-table th {
     font-size: 0.85em;
     letter-spacing: 0.1em;
