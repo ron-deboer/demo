@@ -64,7 +64,7 @@
         <div class="container">
             <div>
                 <!-------------------------------------------------------->
-                <include href="{{@content |raw}}" />
+                <?php echo $this->render($this->raw($content),NULL,get_defined_vars(),0); ?>
                 <!-------------------------------------------------------->
             </div>
         </div>
