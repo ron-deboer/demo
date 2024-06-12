@@ -55,7 +55,7 @@ ul {
     height: calc(var(--page-height) - 2.2rem - 2.2rem);
     line-height: 2.2rem;
     text-align: left;
-    padding: 0 10px;
+    padding: 0;
     font-weight: 600;
     color: #444;
 }
@@ -156,6 +156,7 @@ ul {
     form
 */
 .dm-form {
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -189,6 +190,7 @@ ul {
     Welcome Page
 */
 .welcome {
+    padding: 10px;
     font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1rem;
     line-height: 1rem;
@@ -203,4 +205,89 @@ ul {
 }
 .welcome .label {
     margin-bottom: 1rem;
+}
+/*
+  table
+*/
+.dm-table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.dm-table caption {
+    font-size: 1.5em;
+    margin: 0.5em 0 0.75em;
+}
+
+.dm-table tr {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #444;
+    padding: 0;
+    margin: 0;
+}
+
+.dm-table th,
+.dm-table td {
+    padding: 0.625em;
+    text-align: center;
+}
+
+.dm-table th {
+    font-size: 0.85em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: darkorange;
+}
+
+@media screen and (max-width: 600px) {
+    .dm-table {
+        border: 0;
+    }
+
+    .dm-table caption {
+        font-size: 1.3em;
+    }
+
+    .dm-table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    .dm-table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: 0.625em;
+    }
+
+    .dm-table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: 0.8em;
+        text-align: right;
+    }
+
+    .dm-table td::before {
+        /*
+     * aria-label has no advantage.
+     * it won't be read inside a .dm-table content: attr(aria-label);
+     */
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .dm-table td:last-child {
+        border-bottom: 0;
+    }
 }
