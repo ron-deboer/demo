@@ -11,7 +11,7 @@
     .timeline {
         width: 100%;
         max-width: 800px;
-        padding: 100px 50px;
+        padding: 25px 50px;
         position: relative;
         background: #fff;
     }
@@ -77,9 +77,10 @@
         font-weight: 400;
     }
     .entry .body ul {
-        color: #aaa;
+        color: slateblue;
         padding-left: 0;
         list-style-type: none;
+        font-weight: 600;
     }
     .entry .body ul li:before {
         content: "–";
@@ -90,95 +91,61 @@
 <h3>CV Employment Timeline</h3>
 <div class="wrapper" style="max-height: 800px; overflow-y: auto">
     <div class="timeline">
+        <!--        -->
         <div class="entry">
             <div class="title">
-                <h3>2014 - Present</h3>
-                <p>Title, Company</p>
+                <h3>2013 - 2021</h3>
+                <p>Senior Software Engineer<br />Tabcorp Pty Ltd</p>
             </div>
             <div class="body">
                 <p>
-                    Voluptatibus veniam ea reprehenderit atque reiciendis non
-                    laborum adipisci ipsa pariatur omnis.
+                    My role at Tabcorp was to develop and maintian wagering
+                    software for web and desktop applications.
                 </p>
                 <ul>
-                    <li>Rerum sit libero possimus amet excepturi</li>
-                    <li>
-                        Exercitationem enim dolores sunt praesentium dolorum
-                        praesentium
-                    </li>
-                    <li>
-                        Modi aut dolores dignissimos sequi sit ut aliquid
-                        molestias deserunt illo
-                    </li>
+                    <li>React, Angular, Vue3, PHP, .Net, Python, Javascript</li>
+                    <li>AWS, Azure, MySql, SqlServer, GitHub</li>
+                    <li>Agile Scrum</li>
                 </ul>
             </div>
         </div>
+        <!--        -->
         <div class="entry">
             <div class="title">
-                <h3>2010 - Present</h3>
-                <p>Title, Company</p>
+                <h3>2007 - 2013</h3>
+                <p>Data Analyst / Developer<br />Vodafone Pty Ltd</p>
             </div>
             <div class="body">
                 <p>
-                    Voluptatibus veniam ea reprehenderit atque reiciendis non
-                    laborum adipisci ipsa pariatur omnis.
+                    My role at Vodafone was to collate, analyze and report on
+                    operation transactions. MS Excel (VBA) was used to collate
+                    and analyze data and a PHP + MySQL based web application was
+                    used for reporting.
                 </p>
                 <ul>
-                    <li>Rerum sit libero possimus amet excepturi</li>
-                    <li>
-                        Exercitationem enim dolores sunt praesentium dolorum
-                        praesentium
-                    </li>
-                    <li>
-                        Modi aut dolores dignissimos sequi sit ut aliquid
-                        molestias deserunt illo
-                    </li>
+                    <li>MS Excel, VBA, Javascript, PHP</li>
+                    <li>AWS, MySql, GitHub</li>
+                    <li>Agile Scrum</li>
                 </ul>
             </div>
         </div>
+        <!--        -->
         <div class="entry">
             <div class="title">
-                <h3>2009 - 2010</h3>
-                <p>Title, Company</p>
+                <h3>2000 - 2007</h3>
+                <p>Data Analyst / Developer<br />Data Active Pty Ltd</p>
             </div>
             <div class="body">
                 <p>
-                    Voluptatibus veniam ea reprehenderit atque reiciendis non
-                    laborum adipisci ipsa pariatur omnis.
+                    My role at Data Active was to collate and clean client data
+                    beform importing into relational databases. The design and
+                    development of Direct marketing and Telemarketing software
+                    was also one of my responsibilities.
                 </p>
                 <ul>
-                    <li>Rerum sit libero possimus amet excepturi</li>
-                    <li>
-                        Exercitationem enim dolores sunt praesentium dolorum
-                        praesentium
-                    </li>
-                    <li>
-                        Modi aut dolores dignissimos sequi sit ut aliquid
-                        molestias deserunt illo
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="entry">
-            <div class="title">
-                <h3>2006 - 2008</h3>
-                <p>Title, Company</p>
-            </div>
-            <div class="body">
-                <p>
-                    Voluptatibus veniam ea reprehenderit atque reiciendis non
-                    laborum adipisci ipsa pariatur omnis.
-                </p>
-                <ul>
-                    <li>Rerum sit libero possimus amet excepturi</li>
-                    <li>
-                        Exercitationem enim dolores sunt praesentium dolorum
-                        praesentium
-                    </li>
-                    <li>
-                        Modi aut dolores dignissimos sequi sit ut aliquid
-                        molestias deserunt illo
-                    </li>
+                    <li>MS Excel, VBA, Javascript, PHP</li>
+                    <li>MySql, SqlServer, MS Foxpro</li>
+                    <li>Agile Scrum</li>
                 </ul>
             </div>
         </div>
