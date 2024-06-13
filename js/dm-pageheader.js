@@ -13,7 +13,7 @@ export default class DmPageHeader extends LitElement {
     click(ev) {
         const currPage = "#" + ev.target.closest(".dm-page").getAttribute("id");
         const nextPage = ev.target.closest("span").getAttribute("data-next");
-        window.postMessage({ msg: "navigate", currPage, nextPage });
+        app.eventBus.emit("navigate", { currPage, nextPage });
     }
 
     render() {

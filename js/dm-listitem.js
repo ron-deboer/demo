@@ -15,7 +15,7 @@ export default class DmListItem extends LitElement {
         const nextPage = ev.target
             .closest(".dm-item")
             .getAttribute("data-next");
-        window.postMessage({ msg: "navigate", currPage, nextPage });
+        app.eventBus.emit("navigate", { currPage, nextPage });
     }
 
     render() {

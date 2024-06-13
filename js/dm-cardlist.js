@@ -6,14 +6,28 @@ export default class DmCardList extends LitElement {
         href: {},
     };
 
+    cards = [
+        { id: 1, name: "Visa - 3412", balance: "$880.25", due: "22/6/2024" },
+        { id: 2, name: "AMEX", balance: "$1,134.66", due: "05/7/2024" },
+        { id: 3, name: "Mastercard", balance: "$235.00", due: "10/7/2024" },
+        { id: 4, name: "Visa - 6208", balance: "$23.00", due: "23/7/2024" },
+    ];
+
     constructor() {
         super();
+        this.card = {};
+    }
+
+    openModal(id) {
+        app.renderForm("modal-1", row);
+        app.openModal("modal");
     }
 
     click(ev) {
-        // const currPage = "#" + ev.target.closest(".dm-page").getAttribute("id");
-        // const nextPage = ev.target.closest("span").getAttribute("data-next");
-        // window.postMessage({ msg: "navigate", currPage, nextPage });
+        const id = ev.target.closest("tr").getAttribute("id");
+        this.card = this.cards.find((c) => c.id == id);
+        app.openModal("page4");
+        $$("modal").innerHTML = app.buildTable(this.card);
     }
 
     render() {
@@ -21,27 +35,21 @@ export default class DmCardList extends LitElement {
             <table class="dm-table">
                 <thead>
                     <tr>
-                        <th scope="col">Account</th>
-                        <th scope="col">Balance</th>
+                        <th class="left">Account</th>
+                        <th class="right">Balance</th>
+                        <th>&nbsp;</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Visa - 3412</td>
-                        <td class="right">$1,190</td>
-                    </tr>
-                    <tr>
-                        <td scope="row">Visa - 6076</td>
-                        <td class="right">$2,443</td>
-                    </tr>
-                    <tr>
-                        <td scope="row">AMEX</td>
-                        <td class="right">$1,181</td>
-                    </tr>
-                    <tr>
-                        <td scope="row" data-label="Acount">Visa - 3332</td>
-                        <td class="right">$842</td>
-                    </tr>
+                    ${this.cards.map(
+                        (c) => html`
+                            <tr id="${c.id}" @click="${this.click}">
+                                <td>${c.name}</td>
+                                <td class="right red">${c.balance}</td>
+                                <td class="next">&#11208;</td>
+                            </tr>
+                        `
+                    )}
                 </tbody>
             </table>
         `;

@@ -10,11 +10,7 @@ export default class DmCryptoList extends LitElement {
         super();
     }
 
-    click(ev) {
-        // const currPage = "#" + ev.target.closest(".dm-page").getAttribute("id");
-        // const nextPage = ev.target.closest("span").getAttribute("data-next");
-        // window.postMessage({ msg: "navigate", currPage, nextPage });
-    }
+    click(ev) {}
 
     render() {
         return html`

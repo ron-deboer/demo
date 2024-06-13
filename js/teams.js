@@ -5,7 +5,6 @@ new Vue({
         const _this = this;
         this.showPage(1);
         app.eventBus.on("page-change", function (ev) {
-            console.log(ev.detail);
             _this.showPage(ev.detail);
         });
     },

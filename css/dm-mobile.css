@@ -104,6 +104,9 @@ ul {
 .hide {
     display: none;
 }
+.mt-1 {
+    margin-top: 1rem;
+}
 .mt-2 {
     margin-top: 2rem;
 }
@@ -119,14 +122,23 @@ ul {
 .mb-4 {
     margin-bottom: 4rem;
 }
+.w-1 {
+    max-width: 10px;
+}
 .bg-white {
     background: #fff !important;
 }
 .bg-ddd {
     background: #ddd;
 }
+.left {
+    text-align: left !important;
+}
 .right {
     text-align: right !important;
+}
+.red {
+    color: crimson;
 }
 /*  
     buttons
@@ -222,12 +234,11 @@ ul {
     margin: 0;
     padding: 0;
     width: 100%;
-    table-layout: fixed;
 }
 
 .dm-table caption {
-    font-size: 1.5em;
-    margin: 0.5em 0 0.75em;
+    font-size: 1.5rem;
+    margin: 0.5rem 0 0.75rem;
 }
 
 .dm-table tr {
@@ -238,65 +249,48 @@ ul {
 }
 
 .dm-table th {
-    padding: 0.625em;
+    padding: 0.625rem;
     text-align: center;
-}
-.dm-table td {
-    padding: 0.625em;
-    text-align: left;
-}
-.dm-table th {
-    font-size: 0.85em;
-    letter-spacing: 0.1em;
+    font-size: 0.85rem;
+    letter-spacing: 0.1rem;
     text-transform: uppercase;
     color: darkorange;
 }
+.dm-table td {
+    padding: 0.625rem;
+    text-align: left;
+    white-space: nowrap;
+}
+.dm-table td.next {
+    width: 1rem;
+    max-width: 1rem;
+    cursor: pointer;
+}
 
-@media screen and (max-width: 600px) {
-    .dm-table {
-        border: 0;
-    }
-
-    .dm-table caption {
-        font-size: 1.3em;
-    }
-
-    .dm-table thead {
-        border: none;
-        clip: rect(0 0 0 0);
-        height: 1px;
-        margin: -1px;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
-        width: 1px;
-    }
-
-    .dm-table tr {
-        border-bottom: 3px solid #ddd;
-        display: block;
-        margin-bottom: 0.625em;
-    }
-
-    .dm-table td {
-        border-bottom: 1px solid #ddd;
-        display: block;
-        font-size: 0.8em;
-        text-align: right;
-    }
-
-    .dm-table td::before {
-        /*
-     * aria-label has no advantage.
-     * it won't be read inside a .dm-table content: attr(aria-label);
-     */
-        content: attr(data-label);
-        float: left;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-
-    .dm-table td:last-child {
-        border-bottom: 0;
-    }
+/* MODAL STYLES */
+#modal-overlay {
+    width: var(--page-width);
+    height: var(--page-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(100, 100, 100, 0.75);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+#modal-overlay #modal {
+    max-width: 700px;
+    width: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    text-align: left;
+    border: 8px solid purple;
+}
+#modal-overlay #modal .modal-footer {
+    margin-top: auto;
+    text-align: right;
 }
