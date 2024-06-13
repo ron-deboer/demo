@@ -68,7 +68,9 @@
                 <!-------------------------------------------------------->
             </div>
         </div>
-
+        <div class="footer mt-6 center">
+            <a href="https://github.com/ron-deboer/demo">Source Code</a>
+        </div>
         <script src="js/main.js"></script>
     </body>
 </html>

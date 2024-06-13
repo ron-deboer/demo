@@ -16,6 +16,42 @@ label {
 .hide {
     display: none;
 }
+.mt-1 {
+    margin-top: 1rem;
+}
+.mt-2 {
+    margin-top: 2rem;
+}
+.mt-4 {
+    margin-top: 4rem;
+}
+.mt-6 {
+    margin-top: 6rem;
+}
+.mt-8 {
+    margin-top: 8rem;
+}
+.mb-4 {
+    margin-bottom: 4rem;
+}
+.w-1 {
+    max-width: 10px;
+}
+.bg-white {
+    background: #fff !important;
+}
+.bg-ddd {
+    background: #ddd;
+}
+.left {
+    text-align: left !important;
+}
+.right {
+    text-align: right !important;
+}
+.red {
+    color: crimson;
+}
 .paginate > span {
     color: #9b4dca;
     cursor: pointer;
@@ -31,6 +67,10 @@ label {
     content: "";
     width: 100%;
     display: inline-block;
+}
+.footer {
+    width: 100%;
+    text-align: center;
 }
 
 /* DASHBOARD STYLES */
@@ -110,9 +150,9 @@ label {
     flex-direction: column;
     padding: 1rem;
     text-align: left;
-    border: 8px solid #ccf;    
+    border: 8px solid #ccf;
 }
 #modal-overlay #modal .modal-footer {
     margin-top: auto;
-    text-align: right;    
+    text-align: right;
 }
