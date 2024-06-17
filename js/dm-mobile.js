@@ -35,10 +35,10 @@ const app = {
         const pg = $$(id);
         $$("modal-overlay").style.top = pg.offsetTop + "px";
         $$("modal-overlay").style.left = pg.offsetLeft + "px";
-        $$("modal-overlay").style.display = "flex";
+        $$("modal-overlay").classList.toggle("open");
     },
     closeModal: function () {
-        $$("modal-overlay").style.display = "none";
+        $$("modal-overlay").classList.toggle("open");
     },
     renderForm: function (formId, data) {
         const frm = document.getElementById(formId);

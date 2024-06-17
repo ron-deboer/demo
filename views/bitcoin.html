@@ -1,0 +1,29 @@
+<div class="container">
+    <h3>Bitcoin Statistics</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Balance, BTC</th>
+                <th>Addresses</th>
+                <th>% Addresses (Total)</th>
+                <th>BTC</th>
+                <th>USD</th>
+                <th>% BTC (Total)</th>
+            </tr>
+        </thead>
+        <tbody id="bitcoin">
+            <repeat group="{{ @bitcoin }}" value="{{ @b }}">
+                <tr class="hide">
+                    <td>{{@team.name}}</td>
+                    <td>{{@team.city}}</td>
+                    <td>{{@team.state}}</td>
+                    <td>{{@team.venue}}</td>
+                    <td>{{@team.league}}</td>
+                </tr>
+            </repeat>
+        </tbody>
+    </table>
+    <div id="paginate"></div>
+</div>
+
+<script src="js/teams.js" type="module"></script>

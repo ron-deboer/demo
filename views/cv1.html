@@ -10,8 +10,9 @@
     }
     .timeline {
         width: 100%;
-        max-width: 800px;
-        padding: 25px 50px;
+        max-width: 880px;
+        padding: 0 25px;
+        padding-top: 25px;
         position: relative;
         background: #fff;
     }
@@ -52,7 +53,7 @@
         background-color: #fff;
         border-radius: 100%;
         top: 15%;
-        right: -9px;
+        right: -17px;
         z-index: 99;
     }
     .entry .title h3 {
@@ -74,7 +75,7 @@
     }
     .entry .body p:first-child {
         margin-top: 0;
-        font-weight: 400;
+        font-weight: 600;
     }
     .entry .body ul {
         color: slateblue;
@@ -83,7 +84,7 @@
         font-weight: 600;
     }
     .entry .body ul li:before {
-        content: "–";
+        content: "⯈";
         margin-right: 0.5em;
     }
 </style>
@@ -103,7 +104,10 @@
                     software for web and desktop applications.
                 </p>
                 <ul>
-                    <li>React, Angular, Vue3, PHP, .Net, Python, Javascript</li>
+                    <li>
+                        React, Angular, Vue3, PHP, .Net, C#, Java, Python,
+                        Javascript
+                    </li>
                     <li>AWS, Azure, MySql, SqlServer, GitHub</li>
                     <li>Agile Scrum</li>
                 </ul>
@@ -132,7 +136,7 @@
         <!--        -->
         <div class="entry">
             <div class="title">
-                <h3>2000 - 2007</h3>
+                <h3>1999 - 2007</h3>
                 <p>Data Analyst / Developer<br />Data Active Pty Ltd</p>
             </div>
             <div class="body">
@@ -143,7 +147,7 @@
                     was also one of my responsibilities.
                 </p>
                 <ul>
-                    <li>MS Excel, VBA, Javascript, PHP</li>
+                    <li>MS Excel, VBA, C++, Java, Javascript, PHP</li>
                     <li>MySql, SqlServer, MS Foxpro</li>
                     <li>Agile Scrum</li>
                 </ul>
