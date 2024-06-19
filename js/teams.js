@@ -1,3 +1,5 @@
+import { app } from "./main.js";
+
 // team listing
 new Vue({
     el: "#teams",

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>deboer</title>
+        <style>
+            @font-face {
+                font-family: "Roboto";
+                src: url("./css/fonts/Roboto-Light.ttf") format("truetype");
+                font-weight: normal;
+                font-style: normal;
+            }
+        </style>
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/milligram.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div id="app">
+                <h1>{{ message }}</h1>
+
+                <test-component></test-component>
+            </div>
+        </div>
+        <script type="importmap">
+            {
+                "imports": {
+                    "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+                }
+            }
+        </script>
+
+        <script type="module">
+            import { TestComponent } from "./Components/testcomponent.js";
+            customElements.define("test-component", TestComponent);
+
+            import { createApp } from "vue";
+
+            createApp({
+                data() {
+                    return {
+                        message: "Hello Vue!",
+                    };
+                },
+            }).mount("#app");
+        </script>
+    </body>
+</html>

@@ -14,63 +14,20 @@
         </style>
         <link rel="stylesheet" href="css/normalize.css" />
         <link rel="stylesheet" href="css/milligram.min.css" />
-        <link rel="stylesheet" href="css/nav.css" />
         <link rel="stylesheet" href="css/style.css" />
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="js/main.js" type="module"></script>
+        <script src="Components/navbar.js" type="module"></script>
     </head>
     <body>
-        <nav class="navigation">
-            <section class="container">
-                <a class="navigation-title" href="/demo">
-                    <h1 class="title">DE BOER</h1>
-                </a>
-                <ul class="navigation-list float-right">
-                    <li class="navigation-item">
-                        <a class="navigation-link" href="/demo">Home</a>
-                    </li>
-                    <li class="navigation-item">
-                        <a class="navigation-link" href="Dashboard"
-                            >Dashboard</a
-                        >
-                    </li>
-                    <li class="navigation-item">
-                        <a class="navigation-link" href="Teams">Teams</a>
-                    </li>
-                    <li class="navigation-item">
-                        <a class="navigation-link" href="Restricted"
-                            >Restricted</a
-                        >
-                    </li>
-                    <li class="navigation-item">
-                        <a class="navigation-link" href="mobile.html">Mobile</a>
-                    </li>
-                    <li class="navigation-item">
-                        <a class="navigation-link" href="About">About</a>
-                    </li>
-                    <li class="navigation-item">
-                        <a class="navigation-link" href="Cv">CV</a>
-                    </li>
-                    <li class="navigation-item">
-                        <a
-                            id="navlogin"
-                            class="navigation-link"
-                            href="javascript:app.login();"
-                            >Login</a
-                        >
-                    </li>
-                </ul>
-            </section>
-        </nav>
+        <nav-bar></nav-bar>
         <div class="container">
-            <div>
-                <!-------------------------------------------------------->
-                <?php echo $this->render($this->raw($content),NULL,get_defined_vars(),0); ?>
-                <!-------------------------------------------------------->
-            </div>
+            <!-------------------------------------------------------->
+            <?php echo $this->render($this->raw($content),NULL,get_defined_vars(),0); ?>
+            <!-------------------------------------------------------->
         </div>
         <div class="footer mt-6 center">
             <a href="https://github.com/ron-deboer/demo">Source Code</a>
         </div>
-        <script src="js/main.js"></script>
     </body>
 </html>

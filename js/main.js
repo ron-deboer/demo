@@ -21,7 +21,7 @@ class EventBus {
     }
 }
 //
-let app = {
+const app = {
     eventBus: new EventBus("app-event-bus"),
     login: async function () {
         if (!document.cookie) {
@@ -74,3 +74,19 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("navlogin").innerText = "Logout";
     }
 });
+
+// main Vue application handler
+// import { TestComponent } from "../Components/testcomponent.js";
+// customElements.define("test-component", TestComponent);
+
+// import { createApp } from "vue";
+
+// createApp({
+//     data() {
+//         return {
+//             message: "Hello Vue!",
+//         };
+//     },
+// }).mount(document.body);
+
+export { app };
