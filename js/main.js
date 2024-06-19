@@ -75,18 +75,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// main Vue application handler
-// import { TestComponent } from "../Components/testcomponent.js";
-// customElements.define("test-component", TestComponent);
-
-// import { createApp } from "vue";
-
-// createApp({
-//     data() {
-//         return {
-//             message: "Hello Vue!",
-//         };
-//     },
-// }).mount(document.body);
-
 export { app };

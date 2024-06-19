@@ -80,7 +80,7 @@ new Vue({
             app.eventBus.emit("page-change", this.page);
         },
     },
-    template: `<div id=paginate class="float-right" style="font-size: 1.5rem">
+    template: `<div id=paginate class="float-right" style="font-size:1.5rem;color:red">
             <span @click="prev"> &nbsp; Prev &nbsp; </span> {{ page }}
             <span @click="next"> &nbsp; Next &nbsp; </span>
         </div>`,

@@ -1,5 +1,5 @@
 import { LitElement, html, css } from "../js/lit-element.js";
-
+import { app } from "../js/main.js";
 export default class NavBar extends LitElement {
     static properties = {};
 
@@ -107,7 +107,7 @@ export default class NavBar extends LitElement {
                             <a
                                 id="navlogin"
                                 class="navigation-link"
-                                href="javascript:app.login();"
+                                href="Login"
                                 >Login</a
                             >
                         </li>
