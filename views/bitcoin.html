@@ -14,11 +14,12 @@
         <tbody id="bitcoin">
             <repeat group="{{ @bitcoin }}" value="{{ @b }}">
                 <tr class="hide">
-                    <td>{{@team.name}}</td>
-                    <td>{{@team.city}}</td>
-                    <td>{{@team.state}}</td>
-                    <td>{{@team.venue}}</td>
-                    <td>{{@team.league}}</td>
+                    <td>{{@b.balance}}</td>
+                    <td>{{@b.addresses}}</td>
+                    <td>{{@b.addressestot}}</td>
+                    <td>{{@b.btc}}</td>
+                    <td>{{@b.usd}}</td>
+                    <td>{{@b.percentbtc}}</td>
                 </tr>
             </repeat>
         </tbody>
