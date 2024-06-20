@@ -1,5 +1,5 @@
 import { LitElement, html, css } from "../js/lit-element.js";
-import { app } from "../js/main.js";
+
 export default class NavBar extends LitElement {
     static properties = {};
 
@@ -7,7 +7,24 @@ export default class NavBar extends LitElement {
         super();
     }
 
-    click(ev) {}
+    async handleLogin(ev) {
+        ev.preventDefault();
+        // login
+        if (!document.cookie) {
+            document.location.href = "Login";
+            return;
+        }
+        // logout
+        document.cookie.split(";").forEach(function (c) {
+            document.cookie = c
+                .replace(/^ +/, "")
+                .replace(
+                    /=.*/,
+                    "=;expires=" + new Date().toUTCString() + ";path=/"
+                );
+        });
+        document.location.href = "Home";
+    }
 
     render() {
         return html`
@@ -107,9 +124,10 @@ export default class NavBar extends LitElement {
                             <a
                                 id="navlogin"
                                 class="navigation-link"
-                                href="Login"
-                                >Login</a
-                            >
+                                href="#"
+                                @click="${this.handleLogin}">
+                                Login
+                            </a>
                         </li>
                     </ul>
                 </section>

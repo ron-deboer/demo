@@ -23,22 +23,6 @@ class EventBus {
 //
 const app = {
     eventBus: new EventBus("app-event-bus"),
-    login: async function () {
-        if (!document.cookie) {
-            document.location.href = "Login";
-            return;
-        }
-        // logout
-        document.cookie.split(";").forEach(function (c) {
-            document.cookie = c
-                .replace(/^ +/, "")
-                .replace(
-                    /=.*/,
-                    "=;expires=" + new Date().toUTCString() + ";path=/"
-                );
-        });
-        document.location.href = "Home";
-    },
     render: function (el, html) {
         document.getElementById(el).innerHTML = html;
     },

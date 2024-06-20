@@ -7,7 +7,7 @@
         </p>
         <h4>Other technologies</h4>
         <p>
-            Other than the technologies mentioned above, I consider myself very experienced in .Net React, Angular, SQLServer, MySQl, AWS, Azure, Agile Scrum Teams. 
+            Other than the technologies mentioned above, I consider myself very experienced in .Net React, Angular, NodeJS, SQLServer, MySQl, AWS, Azure, Agile Scrum Teams. 
         </p>
     </div>
 

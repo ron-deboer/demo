@@ -108,7 +108,7 @@
                             React, Angular, Vue3, PHP, .Net, C#, Java, Python,
                             Javascript
                         </li>
-                        <li>AWS, Azure, MySql, SqlServer, GitHub</li>
+                        <li>NodeJS, AWS, Azure, MySql, SqlServer, GitHub</li>
                         <li>Agile Scrum</li>
                     </ul>
                 </div>
