@@ -1,5 +1,3 @@
-import { app } from "./main.js";
-
 // paginate block
 const paginateTemplate = `
 <style>

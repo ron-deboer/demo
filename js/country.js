@@ -1,5 +1,3 @@
-import { app } from "./main.js";
-
 // country listing
 new Vue({
     el: "#country",
