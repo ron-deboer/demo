@@ -16,7 +16,6 @@
         <link rel="stylesheet" href="css/milligram.min.css" />
         <link rel="stylesheet" href="css/style.css" />
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <script src="js/main.js" type="module"></script>
         <script src="Components/navbar.js" type="module"></script>
     </head>
     <body>
@@ -29,5 +28,6 @@
         <div class="footer mt-6 center">
             <a href="https://github.com/ron-deboer/demo">Source Code</a>
         </div>
+        <script src="js/main.js"></script>
     </body>
 </html>

@@ -40,25 +40,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-function openEditModal(id) {
-    setTimeout(async function () {
-        const resp = await fetch(`api/Task/${id}`);
-        const data = await resp.json();
-        const row = {
-            id: data[0].id,
-            taskid: data[0].taskid,
-            desc: data[0].desc,
-            comment: data[0].comment,
-        };
-        app.renderForm("modal-1", row);
-        app.openModal("modal");
-    }, 10);
-}
-
 function saveTask() {
     setTimeout(async function () {
         const id = $val("id");
-        const resp = await fetch(`api/task/${id}`, {
+        const resp = await fetch(`api/Task/${id}`, {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -70,5 +55,6 @@ function saveTask() {
             }),
         });
         const data = await resp.json();
+        app.closeModal();
     }, 10);
 }

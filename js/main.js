@@ -27,7 +27,7 @@ const app = {
         document.getElementById(el).innerHTML = html;
     },
     openModal: function (id) {
-        document.getElementById("modal-overlay").style.display = "flex";
+        document.getElementById("modal-overlay").style.display = "block";
     },
     closeModal: function () {
         document.getElementById("modal-overlay").style.display = "none";
@@ -58,5 +58,3 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("navlogin").innerText = "Logout";
     }
 });
-
-export { app };

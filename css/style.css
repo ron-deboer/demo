@@ -11,14 +11,14 @@ label {
     margin-top: 4rem;
 }
 @media only screen and (max-width: 1200px) {
-  .container {
-    max-width: 95vw;
-}
+    .container {
+        max-width: 95vw;
+    }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1800px) {
-  .container {
-      max-width: 80vw;
-  }
+    .container {
+        max-width: 80vw;
+    }
 }
 .center {
     text-align: center;
@@ -149,30 +149,30 @@ label {
 
 /* MODAL STYLES */
 #modal-overlay {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     position: fixed;
+    display: none;
     top: 0;
     left: 0;
     background: rgba(100, 100, 100, 0.7);
-    display: none;
-    align-items: center;
-    justify-content: center;
     z-index: 10000;
 }
 #modal-overlay #modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     max-width: 700px;
-    width: 100%;
+    width: 700px;
     background: white;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 2rem;
     text-align: left;
-    border: 8px solid #ccf;
+    border: 8px solid #aaf;
 }
 #modal-overlay #modal .modal-footer {
     margin-top: auto;
     text-align: right;
 }
-
-

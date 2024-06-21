@@ -1,6 +1,6 @@
 import { createApp } from "./vue.esm-browser.js";
 
-const app = createApp({
+const App = createApp({
     data() {
         return {
             count: 0,
@@ -8,4 +8,4 @@ const app = createApp({
     },
 });
 
-app.mount("#app");
+App.mount("#app");
