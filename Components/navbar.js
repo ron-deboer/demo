@@ -54,10 +54,10 @@ export default class NavBar extends LitElement {
                                         <a class="popover-link" href="Teams" title="Teams List">Teams List</a>
                                     </li>
                                     <li class="popover-item">
-                                        <a class="popover-link" href="source/vue" title="Vue3 Source">Vue3 Source</a>
+                                        <a class="popover-link" href="source/vue" title="Vue3 Example">Vue3 Example</a>
                                     </li>
                                     <li class="popover-item">
-                                        <a class="popover-link" href="source/react" title="React Source">React Source</a>
+                                        <a class="popover-link" href="source/react" title="React Example">React Example</a>
                                     </li>
                                 </ul>
                             </div>
