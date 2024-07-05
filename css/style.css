@@ -1,5 +1,6 @@
 body {
-    overflow: hidden;
+    overflow: auto;
+/*    overflow: hidden;*/
 }
 h4 {
     color: #444;
@@ -148,7 +149,7 @@ label {
 }
 
 /* MODAL STYLES */
-#modal-overlay {
+.modal-overlay {
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -158,13 +159,13 @@ label {
     background: rgba(100, 100, 100, 0.7);
     z-index: 10000;
 }
-#modal-overlay #modal {
+.modal-overlay .modal {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 700px;
-    width: 700px;
+    max-width: 500px;
+    width: 500px;
     background: white;
     display: flex;
     flex-direction: column;
@@ -172,7 +173,7 @@ label {
     text-align: left;
     border: 8px solid #aaf;
 }
-#modal-overlay #modal .modal-footer {
+.modal-overlay .bgBlue .modal-footer {
     margin-top: auto;
     text-align: right;
 }

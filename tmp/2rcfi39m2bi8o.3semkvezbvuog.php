@@ -4,6 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>deboer</title>
+        <base href="<?= ($BASE) ?>" />
         <style>
             @font-face {
                 font-family: "Roboto";
@@ -29,7 +30,8 @@
         <nav-bar></nav-bar>
         <div class="container">
             <!-------------------------------------------------------->
-            <?php echo $this->render($this->raw($content),NULL,get_defined_vars(),0); ?>
+            <?= ($this->raw($content))."
+" ?>
             <!-------------------------------------------------------->
         </div>
         <div class="footer mt-6 center">

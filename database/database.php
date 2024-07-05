@@ -14,7 +14,7 @@ class Database {
         } catch(PDOException $e) {
             echo '<pre>';
             var_dump($e);
-            echo '<pre>';
+            echo '</pre>';
             die();
         }
     }
@@ -29,7 +29,7 @@ class Database {
         } catch(PDOException $e) {
             echo '<pre>';
             var_dump($e);
-            echo '<pre>';
+            echo '</pre>';
             die();
         }
     }
@@ -42,7 +42,7 @@ class Database {
         } catch(PDOException $e) {
             echo '<pre>';
             var_dump($e);
-            echo '<pre>';
+            echo '</pre>';
             die();
         }
     }

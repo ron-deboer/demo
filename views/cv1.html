@@ -145,9 +145,9 @@
                 <div class="body">
                     <p>
                         My role at Data Active was to collate and clean client data
-                        beform importing into relational databases. The design and
-                        development of Direct marketing and Telemarketing software
-                        was also one of my responsibilities.
+                        then import it into relational databases. I also engaged in the design and
+                        development of Direct marketing and Telemarketing software which used the
+                        previously normalised relational data.
                     </p>
                     <ul>
                         <li>MS Excel, VBA, C++, Java, Javascript, PHP</li>

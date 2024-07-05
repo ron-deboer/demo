@@ -29,58 +29,7 @@ export default class NavBar extends LitElement {
     render() {
         return html`
             <style>
-                .navigation {
-                    background: #f4f5f6;
-                    border-bottom: 0.1rem solid #d1d1d1;
-                    display: block;
-                    height: 5.2rem;
-                    left: 0;
-                    max-width: 100%;
-                    width: 100%;
-                }
-                .navigation .container {
-                    padding-bottom: 0;
-                    padding-top: 0;
-                }
-                .navigation .navigation-list {
-                    list-style: none;
-                    margin-bottom: 0;
-                    /*margin-right:5rem*/
-                }
-                @media (min-width: 80rem) {
-                    .navigation .navigation-list {
-                        margin-right: 0;
-                    }
-                }
-                .navigation .navigation-item {
-                    float: left;
-                    margin-bottom: 0;
-                    margin-left: 2.5rem;
-                    position: relative;
-                }
-                .navigation .img {
-                    fill: #9b4dca;
-                    height: 2rem;
-                    position: relative;
-                    top: 0.3rem;
-                }
-                .navigation .navigation-title,
-                .navigation .title {
-                    color: #9b4dca;
-                    position: relative;
-                }
-                .navigation .navigation-link,
-                .navigation .navigation-title,
-                .navigation .title {
-                    display: inline;
-                    font-size: 1.6rem;
-                    line-height: 5.2rem;
-                    padding: 0;
-                    text-decoration: none;
-                }
-                .navigation .navigation-link.active {
-                    color: #606c76;
-                }
+            @import url('./css/navbar.css')
             </style>
             <nav class="navigation">
                 <section class="container">
@@ -97,7 +46,22 @@ export default class NavBar extends LitElement {
                             >
                         </li>
                         <li class="navigation-item">
-                            <a class="navigation-link" href="Teams">Teams</a>
+                            <a class="navigation-link" href="#popover-teams" data-popover>Teams</a>
+                            
+                            <div class="popover" id="popover-teams">
+                                <ul class="popover-list">
+                                    <li class="popover-item">
+                                        <a class="popover-link" href="Teams" title="Teams List">Teams List</a>
+                                    </li>
+                                    <li class="popover-item">
+                                        <a class="popover-link" href="source/vue" title="Vue3 Source">Vue3 Source</a>
+                                    </li>
+                                    <li class="popover-item">
+                                        <a class="popover-link" href="source/react" title="React Source">React Source</a>
+                                    </li>
+                                </ul>
+                            </div>
+
                         </li>
                         <li class="navigation-item">
                             <a class="navigation-link" href="Country"
@@ -140,3 +104,42 @@ export default class NavBar extends LitElement {
     }
 }
 customElements.define("nav-bar", NavBar);
+
+setTimeout(() => {
+    (() => {
+        'use strict'
+
+        const $popoverLinks = document.querySelectorAll('[data-popover]')
+        const $popovers = document.querySelectorAll('.popover')
+        for (let index = 0; index < $popoverLinks.length; index++) {
+            $popoverLinks[index].addEventListener('click', openPopover)
+        }
+
+        document.addEventListener('click', closePopover)
+
+        function closePopover(event) {
+            for (let index = 0; index < $popovers.length; index++) {
+                $popovers[index].classList.remove('popover-open')
+            }
+        }
+
+        function openPopover(event) {
+            event.preventDefault()
+            if (
+                document
+                    .querySelector(this.getAttribute('href'))
+                    .classList.contains('popover-open')
+            ) {
+                document
+                    .querySelector(this.getAttribute('href'))
+                    .classList.remove('popover-open')
+            } else {
+                closePopover()
+                document
+                    .querySelector(this.getAttribute('href'))
+                    .classList.add('popover-open')
+            }
+            event.stopImmediatePropagation()
+        }
+    })()
+}, 1000);

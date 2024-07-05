@@ -11,7 +11,7 @@ class Teams {
         $rows = $team->fetchAll(); 
 
         $f3->set('teams', $rows);
-        $f3->set('content','views/teams.html');
+        $f3->set('content','views/teams2.html');
 
         echo \Template::instance()->render('views/layout.html');
     }

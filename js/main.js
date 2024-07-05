@@ -33,26 +33,37 @@ const app = {
         document.getElementById("modal-overlay").style.display = "none";
     },
     renderForm: function (formId, data) {
-        const frm = document.getElementById(formId);
+        const frm = $$(formId);
         for (let prop in data) {
-            hyd(frm, prop, data[prop]);
+            frm.querySelector("#" + prop).value = data;
         }
     },
+    attachCssToShadow: function (elName) {
+        document.querySelectorAll(elName).forEach((element) => {
+            if (!element.shadowRoot) {
+                return;
+            }
+            const sl1 = document.createElement('link');
+            sl1.setAttribute('rel', 'stylesheet');
+            sl1.setAttribute('href', 'css/style.css');
+            element.shadowRoot.appendChild(sl1);
+            const sl2 = document.createElement('link');
+            sl2.setAttribute('rel', 'stylesheet');
+            sl2.setAttribute('href', 'css/milligram.min.css');
+            element.shadowRoot.appendChild(sl2);
+        });
+    }
 };
 //
 String.prototype.firstWord = function () {
     return this.replace(/\s.*/, "");
 };
-
-//
-function hyd(frm, prop, data) {
-    frm.querySelector("#" + prop).value = data;
+function $$(id) {
+    return document.getElementById(id);
 }
 function $val(id) {
-    return document.getElementById(id).value;
+    return $$(id).value;
 }
-
-//
 document.addEventListener("DOMContentLoaded", function () {
     if (document.cookie) {
         document.getElementById("navlogin").innerText = "Logout";

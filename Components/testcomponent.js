@@ -1,8 +1,28 @@
-import { defineCustomElement } from "vue";
-
-export const TestComponent = defineCustomElement({
-    props: {},
+// test component
+const TestComponent = {
+  data() {
+    return {
+      message: 'My name is: '
+    };
+    },
+    props: {name: String},  
     emits: {},
-    template: `<h3>My Test Component</h3>`,
-    styles: [`/* inlined css */`],
-});
+    methods: {
+        sayHello() {
+            alert('Hello !!');
+        },
+    },
+    styles: [`.container {background: #fcf;}`],
+    template: `
+    <div class="container">
+        <h2>
+            <button @click="this.sayHello">
+                Hello! {{ message }} {{ name }}
+            </button>
+        </h2>
+    </div>`
+};
+
+const tc = Vue.defineCustomElement(TestComponent);
+
+customElements.define('test-component', tc);

@@ -1,28 +1,20 @@
 <div class="container">
-    <h3>Teams</h3>
-    <table>
-        <thead>
-            <tr>
-                <th>Team</th>
-                <th>City</th>
-                <th>State</th>
-                <th>Venue</th>
-                <th>League</th>
-            </tr>
-        </thead>
-        <tbody id="teams">
-            <repeat group="{{ @teams }}" value="{{ @team }}">
-                <tr class="hide">
-                    <td>{{@team.name}}</td>
-                    <td>{{@team.city}}</td>
-                    <td>{{@team.state}}</td>
-                    <td>{{@team.venue}}</td>
-                    <td>{{@team.league}}</td>
-                </tr>
-            </repeat>
-        </tbody>
-    </table>
-    <div id="paginate"></div>
+    <div class="flex">
+        <div><h3>Teams</h3></div>
+        <div class="flex">
+            <div><h5 class="mr-1">League</h5></div>
+            <div>
+                <select onchange="(() => {app.eventBus.emit('filter', this.value)})()">
+                    <option value="ALL">ALL</option>
+                    <option value="MLB">MLB</option>
+                    <option value="NBA">NBA</option>
+                    <option value="NFL">NFL</option>
+                    <option value="NHL">NHL</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div id="teams"></div>
 </div>
 
 <script src="js/teams.js" type="module"></script>

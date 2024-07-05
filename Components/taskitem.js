@@ -2,32 +2,13 @@ import { LitElement, html, css } from "../js/lit-element.js";
 
 export default class TaskItem extends LitElement {
     static properties = {
-        id: {},
-        desc: {},
+        id: {type: String},
+        desc: {type: String},
     };
-
-    constructor() {
-        super();
-    }
-
-    openEditModal(id) {
-        setTimeout(async function () {
-            const resp = await fetch(`api/Task/${id}`);
-            const data = await resp.json();
-            const row = {
-                id: data[0].id,
-                taskid: data[0].taskid,
-                desc: data[0].desc,
-                comment: data[0].comment,
-            };
-            app.renderForm("modal-1", row);
-            app.openModal("modal");
-        }, 10);
-    }
 
     handleEdit(ev) {
         ev.preventDefault();
-        this.openEditModal(this.id);
+        app.eventBus.emit("edit-task", this.id);
     }
 
     render() {

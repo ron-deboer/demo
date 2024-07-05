@@ -1,21 +1,16 @@
 // country listing
-new Vue({
-    el: "#country",
-    mounted() {
-        const _this = this;
-        this.rows = this.$el.querySelector("tbody").children;
-        this.showPage();
-        app.eventBus.on("page-change", function (ev) {
-            _this.page = Math.ceil(ev.detail);
-            _this.showPage();
-        });
+import { createApp } from "vue";
+
+createApp({
+    data() {
+        return {
+            page: 1,
+            perPage: 9,
+            rows: [],
+            filter: "",
+        };
     },
-    data: {
-        page: 1,
-        perPage: 9,
-        rows: [],
-        filter: "",
-    },
+
     methods: {
         showPage() {
             let pgNum = this.page;
@@ -59,27 +54,37 @@ new Vue({
             this.showPage();
         },
     },
-});
 
-// paginate block
-new Vue({
-    el: "#paginate",
-    mounted() {},
-    data: {
-        page: 1,
+    mounted() {
+        const _this = this;
+        this.rows = $$("country").querySelector("tbody").children;
+        this.showPage();
+        app.eventBus.on("page-change", function (ev) {
+            _this.page = Math.ceil(ev.detail);
+            _this.showPage();
+        });
     },
-    methods: {
-        prev() {
-            this.page = Math.max(1, --this.page);
-            app.eventBus.emit("page-change", this.page);
-        },
-        next() {
-            this.page++;
-            app.eventBus.emit("page-change", this.page);
-        },
-    },
-    template: `<div id=paginate class="float-right" style="font-size:1.5rem;color:red">
-            <span @click="prev"> &nbsp; Prev &nbsp; </span> {{ page }}
-            <span @click="next"> &nbsp; Next &nbsp; </span>
-        </div>`,
-});
+}).mount("#country");
+
+// // paginate block
+// new Vue({
+//     el: "#paginate",
+//     mounted() {},
+//     data: {
+//         page: 1,
+//     },
+//     methods: {
+//         prev() {
+//             this.page = Math.max(1, --this.page);
+//             app.eventBus.emit("page-change", this.page);
+//         },
+//         next() {
+//             this.page++;
+//             app.eventBus.emit("page-change", this.page);
+//         },
+//     },
+//     template: `<div id=paginate class="float-right" style="font-size:1.5rem;color:red">
+//             <span @click="prev"> &nbsp; Prev &nbsp; </span> {{ page }}
+//             <span @click="next"> &nbsp; Next &nbsp; </span>
+//         </div>`,
+// });

@@ -19,8 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
             const dropzone = el.querySelector(".colTasks");
             dropzone.appendChild(draggableElement);
             ev.dataTransfer.clearData();
-
-            app.eventBus.emit("task-status", { id, status });
+            // update task status in db
+            setTimeout(async function () {
+                const resp = await fetch(`api/Task/status/${id}/${status}`);
+                const data = await resp.json();
+            }, 10);
         });
     });
     const editlinks = document.querySelectorAll(".editLink");
@@ -30,31 +33,4 @@ document.addEventListener("DOMContentLoaded", function () {
             const id = ev.target.parentNode.id;
         });
     });
-    app.eventBus.on("task-status", ({ detail }) => {
-        setTimeout(async function () {
-            const resp = await fetch(
-                `api/Task/status/${detail.id}/${detail.status}`
-            );
-            const data = await resp.json();
-        }, 10);
-    });
 });
-
-function saveTask() {
-    setTimeout(async function () {
-        const id = $val("id");
-        const resp = await fetch(`api/Task/${id}`, {
-            method: "POST",
-            headers: {
-                "content-type": "application/json",
-            },
-            body: JSON.stringify({
-                taskid: $val("taskid"),
-                desc: $val("desc"),
-                comment: $val("comment"),
-            }),
-        });
-        const data = await resp.json();
-        app.closeModal();
-    }, 10);
-}
