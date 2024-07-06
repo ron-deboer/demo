@@ -2,7 +2,7 @@
     <h3>Restricted Area</h3>
     <div>
         <img
-            src="images/mvc.jpg"
+            src="/demo/images/mvc.jpg"
             alt="secure"
             width="1350px"
         />

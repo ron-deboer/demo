@@ -45,11 +45,11 @@ const app = {
             }
             const sl1 = document.createElement('link');
             sl1.setAttribute('rel', 'stylesheet');
-            sl1.setAttribute('href', 'css/style.css');
+            sl1.setAttribute('href', '/demo/css/style.css');
             element.shadowRoot.appendChild(sl1);
             const sl2 = document.createElement('link');
             sl2.setAttribute('rel', 'stylesheet');
-            sl2.setAttribute('href', 'css/milligram.min.css');
+            sl2.setAttribute('href', '/demo/css/milligram.min.css');
             element.shadowRoot.appendChild(sl2);
         });
     }

@@ -7,14 +7,14 @@
         <style>
             @font-face {
                 font-family: "Roboto";
-                src: url("./css/fonts/Roboto-Light.ttf") format("truetype");
+                src: url("/demo/css/fonts/Roboto-Light.ttf") format("truetype");
                 font-weight: normal;
                 font-style: normal;
             }
         </style>
-        <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="css/milligram.min.css" />
-        <link rel="stylesheet" href="css/style.css" /></script>
+        <link rel="stylesheet" href="/demo/css/normalize.css" />
+        <link rel="stylesheet" href="/demo/css/milligram.min.css" />
+        <link rel="stylesheet" href="/demo/css/style.css" /></script>
         <script type="importmap">
           {
             "imports": {
@@ -22,7 +22,7 @@
             }
           }
         </script>
-        <script src="Components/navbar.js" type="module"></script>
+        <script src="/demo/Components/navbar.js" type="module"></script>
 
     </head>
     <body>
@@ -35,6 +35,6 @@
         <div class="footer mt-6 center">
             <a href="https://github.com/ron-deboer/demo">Github Source</a>
         </div>
-        <script src="js/main.js"></script>
+        <script src="/demo/js/main.js"></script>
     </body>
 </html>

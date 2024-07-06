@@ -16,4 +16,4 @@
 </div>
 <teams-list></teams-list>    
 
-<script src="js/teams2.js" type="module"></script>
+<script src="/demo/js/teams2.js" type="module"></script>

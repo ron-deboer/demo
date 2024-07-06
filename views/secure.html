@@ -3,7 +3,7 @@
 
     <div>
         <img
-            src="images/splash2.png"
+            src="/demo/images/splash2.png"
             alt="secure"
             width="1350px"
             height="550px"

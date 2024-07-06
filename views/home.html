@@ -2,7 +2,7 @@
     <h3>Ron deBoer - Web Developer</h3>
 
     <div>
-        <img src="images/splash.png" alt="home" />
+        <img src="/demo/images/splash.png" alt="home" />
     </div>
 
     <div class="stretch" style="color: #6d9bb5">

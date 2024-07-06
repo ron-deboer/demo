@@ -12,7 +12,7 @@ $f3->route('GET /','Controllers\Home->get');
 // render page (GET,POST,PUT etc)
 $f3->map('/@page','Controllers\@page');
 
-// render page->method (GET)
+// render controller->method (GET)
 $f3->route('GET /@page/@method','Controllers\@page->@method');
 
 

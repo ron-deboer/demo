@@ -15,4 +15,4 @@
 
 <edit-task-item></edit-task-item>
 
-<script src="js/dashboard.js"></script>
+<script src="/demo/js/dashboard.js"></script>

@@ -9,8 +9,6 @@ class Source {
         $f3->set('title','VUE3 Example');  
         $src = \Template::instance()->render('views/source.html');
 
-        $a = explode('demo', $f3->REALM);
-        $f3->set('BASE', $a[0] . "demo/");
         $f3->set('content',$src);
         echo \Template::instance()->render('views/layout1.html');
     }
@@ -20,8 +18,6 @@ class Source {
         $f3->set('title','REACT Example');         
         $src = \Template::instance()->render('views/source.html');
 
-        $a = explode('demo', $f3->REALM);
-        $f3->set('BASE', $a[0] . "demo/");
         $f3->set('content',$src);
         echo \Template::instance()->render('views/layout1.html');
     }

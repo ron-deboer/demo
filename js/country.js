@@ -65,26 +65,3 @@ createApp({
         });
     },
 }).mount("#country");
-
-// // paginate block
-// new Vue({
-//     el: "#paginate",
-//     mounted() {},
-//     data: {
-//         page: 1,
-//     },
-//     methods: {
-//         prev() {
-//             this.page = Math.max(1, --this.page);
-//             app.eventBus.emit("page-change", this.page);
-//         },
-//         next() {
-//             this.page++;
-//             app.eventBus.emit("page-change", this.page);
-//         },
-//     },
-//     template: `<div id=paginate class="float-right" style="font-size:1.5rem;color:red">
-//             <span @click="prev"> &nbsp; Prev &nbsp; </span> {{ page }}
-//             <span @click="next"> &nbsp; Next &nbsp; </span>
-//         </div>`,
-// });

@@ -1,4 +1,4 @@
-import { LitElement, html, css } from "../js/lit-element.js";
+import { LitElement, html, css } from "/demo/js/lit-element.js";
 
 export default class NavBar extends LitElement {
     static properties = {};
@@ -29,7 +29,7 @@ export default class NavBar extends LitElement {
     render() {
         return html`
             <style>
-            @import url('./css/navbar.css')
+            @import url('/demo/css/navbar.css')
             </style>
             <nav class="navigation">
                 <section class="container">
