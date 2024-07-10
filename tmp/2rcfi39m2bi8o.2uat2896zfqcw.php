@@ -33,4 +33,4 @@
     <div id="paginate" class="hide"></div>
 </div>
 
-<script src="js/country.js" type="module"></script>
+<script src="/demo/js/country.js" type="module"></script>

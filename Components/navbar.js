@@ -51,38 +51,43 @@ export default class NavBar extends LitElement {
                             <div class="popover" id="popover-teams">
                                 <ul class="popover-list">
                                     <li class="popover-item">
-                                        <a class="popover-link" href="Teams" title="Teams List">Teams List</a>
+                                        <a class="popover-link" href="/demo/Teams" title="Teams List">Teams List</a>
                                     </li>
                                     <li class="popover-item">
-                                        <a class="popover-link" href="source/vue" title="Vue3 Example">Vue3 Example</a>
+                                        <a class="popover-link" href="/demo/source/vue" title="Vue3 Example">Vue3 Example</a>
                                     </li>
                                     <li class="popover-item">
-                                        <a class="popover-link" href="source/react" title="React Example">React Example</a>
+                                        <a class="popover-link" href="/demo/source/react" title="React Example">React Example</a>
                                     </li>
                                 </ul>
                             </div>
 
                         </li>
                         <li class="navigation-item">
-                            <a class="navigation-link" href="Country"
+                            <a class="navigation-link" href="/demo/Country"
                                 >Countries</a
                             >
                         </li>
                         <li class="navigation-item">
-                            <a class="navigation-link" href="Restricted"
+                            <a class="navigation-link" href="/demo/Restricted"
                                 >Restricted</a
                             >
                         </li>
                         <li class="navigation-item">
-                            <a class="navigation-link" href="mobile.html"
+                            <a class="navigation-link" href="/demo/mobile.html"
                                 >Mobile</a
                             >
                         </li>
                         <li class="navigation-item">
-                            <a class="navigation-link" href="About">About</a>
+                            <a class="navigation-link" href="/demo/Sse"
+                            >SSE</a
+                            >
+                        </li>                        
+                        <li class="navigation-item">
+                            <a class="navigation-link" href="/demo/About">About</a>
                         </li>
                         <li class="navigation-item">
-                            <a class="navigation-link" href="Cv">CV</a>
+                            <a class="navigation-link" href="/demo/Cv">CV</a>
                         </li>
                         <li class="navigation-item">
                             <a

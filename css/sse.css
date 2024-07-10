@@ -1,0 +1,74 @@
+.dm-wrapper {
+    background-image: url(../images/mobile1.png);
+    background-repeat: no-repeat;
+    position: relative;
+    min-width: 30rem;
+    min-height: 60rem;
+}
+.dm-page {
+    left: 23px;
+    top: 83px;
+    width: 24rem;
+    height: 42.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #ddd;
+    position: absolute;
+}
+.dm-form {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    line-height: 1rem;
+    gap: 1rem;
+    margin-top: 1rem;
+}    
+.dm-form input {
+    background-color: #fff;
+    font-size: 1.5rem;
+    line-height: 1rem;
+    border: none;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    outline: none;
+}
+.dm-button, .dm-button:focus {
+    display: inline-block;
+    padding: 0.75em 1.2em;
+    border: 0.16em solid rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+    text-align: center;
+    width: 100%;
+    background-color: SlateBlue;
+    cursor: pointer;
+}
+.commentlist {
+    margin: 0 auto;
+    width: 90%;
+    color: #000;
+    font-size: 1.25rem;        
+}
+.commentlist th {
+    padding: 5px;
+    background-color: #cff;
+    text-align: center;
+}
+.commentlist td {
+    padding: 5px;
+    border-bottom: 1px solid #888;
+}
+.commentlist td:first-child {
+    border-right: 1px solid #888;
+}    
