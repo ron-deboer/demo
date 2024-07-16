@@ -3,48 +3,37 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>deboer</title>
-        <style>
-            @font-face {
-                font-family: "Roboto";
-                src: url("./css/fonts/Roboto-Light.ttf") format("truetype");
-                font-weight: normal;
-                font-style: normal;
-            }
-        </style>
-        <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="css/milligram.min.css" />
-        <link rel="stylesheet" href="css/style.css" />
+        <title>test</title>
     </head>
     <body>
-        <div class="container">
-            <div id="app">
-                <h1>{{ message }}</h1>
 
-                <test-component></test-component>
-            </div>
-        </div>
-        <script type="importmap">
-            {
-                "imports": {
-                    "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
-                }
+        <pre id="app"></pre>
+
+        <script>
+            let comments = [];
+            const $$ = (id) => {
+                return document.getElementById(id);
+            };
+            function getComments() {
+                const subscription = new EventSource('http://localhost:3000/api/sse/comment');
+                subscription.addEventListener('open', () => {
+                    console.log('Connection opened')
+                });
+                subscription.addEventListener('error', () => {
+                    console.error("Subscription error")
+                });
+                subscription.addEventListener('comment', (ev) => {
+                    console.log('Receive comment');
+                    const data = JSON.parse(ev.data);
+                    // console.log(data);
+                    comments = comments.concat(data);
+                    // console.log(comments);                    
+                    $$('app').innerHTML = JSON.stringify(comments, null, 2);                    
+                });
             }
-        </script>
-
-        <script type="module">
-            import { TestComponent } from "./Components/testcomponent.js";
-            customElements.define("test-component", TestComponent);
-
-            import { createApp } from "vue";
-
-            createApp({
-                data() {
-                    return {
-                        message: "Hello Vue!",
-                    };
-                },
-            }).mount("#app");
+            document.addEventListener("DOMContentLoaded", function () {
+                getComments();
+            });            
         </script>
     </body>
 </html>

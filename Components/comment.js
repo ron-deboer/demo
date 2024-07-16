@@ -37,7 +37,7 @@ export default class CommentBlock extends LitElement {
             </form>
         `;
     }
-
+    
     createRenderRoot() {
         return this;
     }

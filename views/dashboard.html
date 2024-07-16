@@ -13,6 +13,8 @@
 
 </div>
 
+<p class="center magenta">drag a grey task block to another column.</p>
+
 <edit-task-item></edit-task-item>
 
 <script src="/demo/js/dashboard.js"></script>
